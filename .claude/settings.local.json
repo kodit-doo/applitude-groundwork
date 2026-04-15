@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest *)",
+      "Bash(taskkill /PID 6800 /F)",
+      "Bash(npm run *)"
+    ]
+  }
+}

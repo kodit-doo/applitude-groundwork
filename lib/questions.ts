@@ -1,0 +1,221 @@
+import { Section } from "@/types/interview";
+
+export const sections: Section[] = [
+  {
+    id: "s1",
+    title: "Problem Statement",
+    questions: [
+      {
+        id: "1.1",
+        section: "s1",
+        text: "What specific problem are you solving? Describe it in one or two sentences.",
+        placeholder: "e.g. Logistics managers spend 3+ hours daily reconciling shipment data across 5 disconnected tools.",
+        extracting: "Core problem definition",
+      },
+      {
+        id: "1.2",
+        section: "s1",
+        text: 'Who experiences this problem most acutely? Be specific — not "small businesses" but "operations managers at 10-50 person logistics companies."',
+        placeholder: "e.g. Operations managers at 10-50 person logistics companies who handle 50-200 shipments per day.",
+        extracting: "Problem owner / primary persona",
+      },
+      {
+        id: "1.3",
+        section: "s1",
+        text: "How are people solving this today? What tools, workarounds, or manual processes do they use?",
+        placeholder: "e.g. Spreadsheets, manual data entry, a mix of 3PL portals and email chains.",
+        extracting: "Current alternatives, market gap",
+      },
+      {
+        id: "1.4",
+        section: "s1",
+        text: "Why is this problem worth solving now — what has changed recently that makes it urgent?",
+        placeholder: "e.g. Shipping volumes are up 40% post-pandemic but team sizes have not grown. AI tools now make automation viable at SMB price points.",
+        extracting: "Market timing, urgency signal",
+      },
+    ],
+  },
+  {
+    id: "s2",
+    title: "Vision",
+    questions: [
+      {
+        id: "2.1",
+        section: "s2",
+        text: "If this product succeeds completely in 3 years, what does the world look like differently?",
+        placeholder: "e.g. Every small logistics company operates with the efficiency of a Fortune 500 supply chain team.",
+        extracting: "Long-term impact statement",
+      },
+      {
+        id: "2.2",
+        section: "s2",
+        text: "What is the one thing your product will be the best in the world at?",
+        placeholder: "e.g. Automatically reconciling shipment data from any carrier in under 30 seconds.",
+        extracting: "Unique value proposition",
+      },
+      {
+        id: "2.3",
+        section: "s2",
+        text: "What is explicitly out of scope — what will this product never try to do?",
+        placeholder: "e.g. We will not become a TMS. We will not handle customs or compliance. We focus only on visibility and reconciliation.",
+        extracting: "Boundary definition, focus",
+      },
+    ],
+  },
+  {
+    id: "s3",
+    title: "Target Users",
+    questions: [
+      {
+        id: "3.1",
+        section: "s3",
+        text: "Who is your primary user — the person who uses the product daily? Describe their role, context, and what a typical day looks like for them.",
+        placeholder: "e.g. Sarah, 34, operations manager at a 25-person e-commerce fulfillment company. She starts every morning firefighting delayed shipments.",
+        extracting: "Primary persona",
+      },
+      {
+        id: "3.2",
+        section: "s3",
+        text: "Is there a secondary user or buyer different from the primary user? (e.g. a manager who pays but a team member who uses)",
+        placeholder: "e.g. The COO approves the purchase but does not use the product daily. They care about cost savings and liability reduction.",
+        extracting: "Secondary persona, buyer vs user split",
+      },
+      {
+        id: "3.3",
+        section: "s3",
+        text: "Have you talked to any potential users? What is the sharpest thing you heard from them?",
+        placeholder: "e.g. I spend more time updating our tracking spreadsheet than I do actually managing shipments. — ops manager, 5 interviews",
+        extracting: "Validation signal, voice of customer",
+      },
+    ],
+  },
+  {
+    id: "s4",
+    title: "User Needs",
+    questions: [
+      {
+        id: "4.1",
+        section: "s4",
+        text: "What is the primary job your user is trying to get done when they use your product?",
+        placeholder: "e.g. Know the real-time status of every open shipment without logging into 5 different portals.",
+        extracting: "Core JTBD",
+      },
+      {
+        id: "4.2",
+        section: "s4",
+        text: "What frustrates them most about how they do this today?",
+        placeholder: "e.g. Data is always out of sync. When something goes wrong, they find out from the customer — not from their own systems.",
+        extracting: "Pain points",
+      },
+      {
+        id: "4.3",
+        section: "s4",
+        text: "What would make them switch from their current solution to yours — what is the trigger moment?",
+        placeholder: "e.g. A high-profile shipment goes missing and they have no visibility. After that incident, they are ready to pay for anything that prevents it.",
+        extracting: "Switching trigger, activation insight",
+      },
+      {
+        id: "4.4",
+        section: "s4",
+        text: "What does success look like for your user after using your product? How do they measure it?",
+        placeholder: "e.g. Zero customer escalations about shipment status. Morning standup takes 10 minutes instead of 45.",
+        extracting: "User success metric",
+      },
+    ],
+  },
+  {
+    id: "s5",
+    title: "Solution Overview",
+    questions: [
+      {
+        id: "5.1",
+        section: "s5",
+        text: "Describe your solution in 2-3 sentences as if explaining to a smart friend who knows nothing about your industry.",
+        placeholder: "e.g. We connect to every carrier API and your existing tools, pull all shipment data into one place, and surface exceptions automatically so you only deal with what needs attention.",
+        extracting: "Solution narrative",
+      },
+      {
+        id: "5.2",
+        section: "s5",
+        text: "What are the 3 core features that make up the MVP — the minimum needed to deliver core value?",
+        placeholder: "e.g. 1) Unified shipment dashboard. 2) Automated exception alerts. 3) One-click carrier status sync.",
+        extracting: "MVP feature set",
+      },
+      {
+        id: "5.3",
+        section: "s5",
+        text: "What features are you deliberately leaving out of v1, even though they might seem obvious?",
+        placeholder: "e.g. No customer-facing tracking page. No invoicing or billing features. No mobile app.",
+        extracting: "Scope boundary",
+      },
+      {
+        id: "5.4",
+        section: "s5",
+        text: "What is the one interaction or moment where your user first feels the value of your product?",
+        placeholder: "e.g. The first morning they open the dashboard and see all their shipments in one view, with exceptions already flagged — without doing anything.",
+        extracting: "Core value moment / aha moment",
+      },
+    ],
+  },
+  {
+    id: "s6",
+    title: "Business Model",
+    questions: [
+      {
+        id: "6.1",
+        section: "s6",
+        text: "Who pays — the user, a business, or someone else?",
+        placeholder: "e.g. The business pays. The ops manager requests it but the COO or finance director approves the purchase.",
+        extracting: "Buyer identification",
+      },
+      {
+        id: "6.2",
+        section: "s6",
+        text: "How do you plan to charge — subscription, one-time, usage-based, freemium?",
+        placeholder: "e.g. Monthly subscription per seat. Possibly a freemium tier for up to 50 shipments/month.",
+        extracting: "Pricing model hypothesis",
+      },
+      {
+        id: "6.3",
+        section: "s6",
+        text: "What is your rough pricing hypothesis? Even a ballpark.",
+        placeholder: "e.g. $99-$299/month per company. Benchmarking against what they currently pay for disconnected tools.",
+        extracting: "Price point signal",
+      },
+      {
+        id: "6.4",
+        section: "s6",
+        text: "How do users find you — what is the primary acquisition channel?",
+        placeholder: "e.g. LinkedIn outreach to ops managers + logistics community forums. Eventually SEO and word of mouth.",
+        extracting: "GTM hypothesis",
+      },
+    ],
+  },
+  {
+    id: "s7",
+    title: "Success Metrics",
+    questions: [
+      {
+        id: "7.1",
+        section: "s7",
+        text: "What is the single most important metric you will track in the first 3 months after launch?",
+        placeholder: "e.g. Weekly active users who have connected at least one carrier integration.",
+        extracting: "North star metric",
+      },
+      {
+        id: "7.2",
+        section: "s7",
+        text: "What does traction look like at 6 months — users, revenue, or something else?",
+        placeholder: "e.g. 50 paying companies, $15k MRR, NPS above 50.",
+        extracting: "6-month milestone",
+      },
+      {
+        id: "7.3",
+        section: "s7",
+        text: "What would make you confident you have found product-market fit?",
+        placeholder: "e.g. Users tell us they would be very disappointed if it went away. Organic referrals make up 30% of new signups.",
+        extracting: "PMF signal definition",
+      },
+    ],
+  },
+];
