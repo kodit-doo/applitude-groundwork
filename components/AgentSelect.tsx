@@ -75,7 +75,7 @@ export default function AgentSelect({ onSelect }: AgentSelectProps) {
                     onClick={() => setSelected(key)}
                     className={`flex items-start gap-4 p-4 rounded-lg text-left w-full transition-all ${
                       isSelected
-                        ? "border border-[#1E2429]"
+                        ? "border border-[#1E2429] "
                         : "border border-gray-200 hover:border-gray-300"
                     }`}
                   >
