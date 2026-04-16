@@ -7,14 +7,16 @@ interface EmailCaptureProps {
   answers: InterviewAnswers;
   document: VisionDocument;
   onSuccess: () => void;
+  initialEmail?: string;
 }
 
 export default function EmailCapture({
   answers,
   document,
   onSuccess,
+  initialEmail = "",
 }: EmailCaptureProps) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialEmail);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 

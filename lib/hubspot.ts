@@ -11,12 +11,19 @@ export async function pushLeadToHubSpot(
     return;
   }
 
+  // Support both old key format ("1.1") and new descriptive keys ("problemStatement")
+  const problem =
+    answers["problemStatement"] || answers["1.1"] || "";
+  const vision =
+    answers["vision"] || answers["2.1"] || "";
+  const targetUsers =
+    answers["targetUsers"] || answers["1.2"] || "";
+
   const properties: Record<string, string> = {
     email,
-    // Map key discovery answers to HubSpot contact properties
-    ...(answers["1.1"] && { aicofounder_problem: answers["1.1"] }),
-    ...(answers["2.1"] && { aicofounder_vision: answers["2.1"] }),
-    ...(answers["1.2"] && { aicofounder_target_user: answers["1.2"] }),
+    ...(problem && { aicofounder_problem: problem }),
+    ...(vision && { aicofounder_vision: vision }),
+    ...(targetUsers && { aicofounder_target_user: targetUsers }),
   };
 
   // Try to create; if contact already exists (409), update instead

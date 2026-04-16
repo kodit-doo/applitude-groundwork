@@ -1,3 +1,5 @@
+import { AgentKey } from "@/lib/agent.config";
+
 export interface Question {
   id: string;
   section: string;
@@ -28,4 +30,18 @@ export interface Lead {
   email: string;
   answers: InterviewAnswers;
   generatedAt: string;
+}
+
+export interface ConversationMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+export interface SessionState {
+  compressedHistory: ConversationMessage[];
+  completedSections: string[];
+  currentSection: number;
+  isComplete: boolean;
+  agentKey?: AgentKey;
+  isTrollPaused?: boolean;
 }
